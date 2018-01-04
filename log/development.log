@@ -1222,3 +1222,131 @@ Processing by PagesController#show as HTML
 Completed 200 OK in 47ms (Views: 29.1ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for ::1 at 2018-01-04 18:40:28 +0300
+  [1m[35m (7.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'home' LIMIT 1[0m
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 394ms (Views: 341.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:40:32 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:42:31 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 68.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:43:24 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2018-01-04 18:43:27 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'home' LIMIT 1[0m
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:43:29 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2018-01-04 18:43:30 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'home' LIMIT 1[0m
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:43:31 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (2.3ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2018-01-04 18:43:31 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mPage Load (13.6ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'home' LIMIT 1[0m
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 72ms (Views: 55.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/services" for ::1 at 2018-01-04 18:46:41 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"services"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'services' LIMIT 1[0m
+  Rendering pages/services.html.erb within layouts/application
+  Rendered pages/services.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:46:43 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2018-01-04 18:46:43 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'home' LIMIT 1[0m
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for ::1 at 2018-01-04 18:46:44 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"about"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'about' LIMIT 1[0m
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/services" for ::1 at 2018-01-04 18:46:44 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"services"}
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  `pages`.* FROM `pages` WHERE `pages`.`slug` = 'services' LIMIT 1[0m
+  Rendering pages/services.html.erb within layouts/application
+  Rendered pages/services.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 1.1ms)
+
+
