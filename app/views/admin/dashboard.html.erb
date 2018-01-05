@@ -34,7 +34,7 @@
             <td><%= item.created_at %></td>
             <td><%= item.updated_at %></td>
             <td>
-              <a href="" class="btn btn-outline-primary btn-sm">Edit</a>
+              <%= link_to 'Edit', edit_page_path(item), class: 'btn btn-outline-primary btn-sm' %>
               <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
             </td>
           </tr>
