@@ -16,6 +16,11 @@
 
     <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
       <h1 class="h2">Pages <small>(<%= @pages.count %>)</small></h1>
+      <% unless notice.nil? %>
+        <div class="alert alert-warning" role="alert">
+          <p class="mb-0"><%= notice %></p>
+        </div>
+      <% end %>
       <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
@@ -35,7 +40,9 @@
             <td><%= item.updated_at %></td>
             <td>
               <%= link_to 'Edit', edit_page_path(item), class: 'btn btn-outline-primary btn-sm' %>
-              <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
+              <%= link_to(item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-sm') do %>
+                Delete
+              <% end %>
             </td>
           </tr>
         <% end %>

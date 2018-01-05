@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   rescue_from ActionView::MissingTemplate, with: :render_default_page
-  before_action :current_page, only: [:edit, :update]
+  before_action :current_page, only: [:edit, :update, :destroy]
   layout 'admin', only: [:edit, :update, :new]
 
   def show
@@ -39,6 +39,13 @@ class PagesController < ApplicationController
       if @page.save
         format.html { redirect_to root_path + @page.slug, notice: 'Page was successfully created.' }
       end
+    end
+  end
+
+  def destroy
+    @current.destroy
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Page was successfully destroyed.' }
     end
   end
 
