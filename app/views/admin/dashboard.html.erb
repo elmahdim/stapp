@@ -15,31 +15,51 @@
     </nav>
 
     <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-      <h1>Dashboard</h1>
+      <h1 class="h2">Pages <small>(<%= @pages.count %>)</small></h1>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Created at</th>
+          <th>Updated at</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @pages.each do |item| %>
+          <tr>
+            <td><%= item.id %></td>
+            <td><%= item.title %></td>
+            <td><%= item.created_at %></td>
+            <td><%= item.updated_at %></td>
+            <td>
+              <a href="" class="btn btn-outline-primary btn-sm">Edit</a>
+              <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
 
-      <h2>Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Created at</th>
-            <th>Updated at</th>
-            <th>Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>1,001</td>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-          </tr>
-          </tbody>
-        </table>
+      <hr>
+
+      <h2>Contacts</h2>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Full name</h5>
+          <p class="card-text">Address</p>
+          <ul class="list-group">
+            <li class="list-group-item">Email address: email@email.com</li>
+            <li class="list-group-item">Mobile: +123456788999</li>
+            <li class="list-group-item">Rating: *****</li>
+          </ul>
+          <br>
+          <a href="#" class="btn btn-primary">Edit contacts</a>
+        </div>
       </div>
+
+      <br><br><br>
     </main>
   </div>
 </div>

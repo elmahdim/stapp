@@ -2,6 +2,6 @@ class AdminController < ApplicationController
   layout 'admin'
 
   def dashboard
-    @foo = 'AdminController'
+    @pages = Page.all
   end
 end
