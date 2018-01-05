@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get "/:page" => "pages#show"
 
   get 'admin/dashboard' => 'admin#dashboard'
+  get 'admin/pages' => 'admin#pages'
+
+  resources :pages, except: [:show], path: 'admin/page'
 end
