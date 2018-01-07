@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <%= link_to 'Back', admin_dashboard_path, class: 'btn btn-ligh btn-block' %>
+        </li>
+      </ul>
+    </nav>
+
+    <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+      <% unless notice.nil? %>
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading"><%= notice.first %></h4>
+          <p class="mb-0"><%= notice.last %></p>
+        </div>
+      <% end %>
+
+      <%= form_for  @contacts do |f| %>
+        <div class="form-group">
+          <%= f.label :full_name %><br>
+          <%= f.text_field :full_name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :address %><br>
+          <%= f.text_field :address, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :mobile %><br>
+          <%= f.text_field :mobile, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :rating %><br>
+          <%= f.text_field :rating, class: 'form-control' %>
+        </div>
+
+        <div class="form-group text-right">
+          <%= f.submit 'Save changes', :class => 'btn btn-primary' %>
+          <%= link_to 'Close', admin_dashboard_path , class: 'btn btn-link', role: 'button' %>
+        </div>
+      <% end %>
+    </main>
+  </div>
+</div>

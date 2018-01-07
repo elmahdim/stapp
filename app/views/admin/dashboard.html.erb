@@ -3,13 +3,13 @@
     <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="/admin/dashboard">Overview <span class="sr-only">(current)</span></a>
+          <%= link_to 'Overview', admin_dashboard_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/admin/pages">Pages</a>
+          <%= link_to 'Pages', admin_pages_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contacts">Contacts</a>
+          <%= link_to 'Contacts', edit_contact_path(1), class: 'nav-link' %>
         </li>
       </ul>
     </nav>
@@ -59,15 +59,15 @@
       <h2>Contacts</h2>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Full name</h5>
-          <p class="card-text">Address</p>
+          <h5 class="card-title"><%= @contacts.full_name %></h5>
+          <p class="card-text"><%= @contacts.address %></p>
           <ul class="list-group">
-            <li class="list-group-item">Email address: email@email.com</li>
-            <li class="list-group-item">Mobile: +123456788999</li>
-            <li class="list-group-item">Rating: *****</li>
+            <li class="list-group-item">Email address: <%= @contacts.email %></li>
+            <li class="list-group-item">Mobile: <%= @contacts.mobile %></li>
+            <li class="list-group-item">Rating: <%= @contacts.rating %></li>
           </ul>
           <br>
-          <a href="#" class="btn btn-primary">Edit contacts</a>
+          <%= link_to 'Edit contacts',edit_contact_path(1), class: 'btn btn-primary' %>
         </div>
       </div>
 

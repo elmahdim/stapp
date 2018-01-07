@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'admin/pages' => 'admin#pages'
 
   resources :pages, except: [:show], path: 'admin/page'
+  resources :contacts, only: [:edit, :update], path: 'admin/contacts'
 end
