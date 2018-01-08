@@ -7,7 +7,7 @@
   <% if target.new_record? %>
     <div class="form-group">
       <%= f.label :slug %><br>
-      <%= f.text_field :slug, class: 'form-control' %>
+      <%= f.text_field :slug, class: 'form-control', :readonly => true %>
     </div>
   <% end %>
 
