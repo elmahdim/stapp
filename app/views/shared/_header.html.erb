@@ -1,0 +1,26 @@
+<% pages = Page.all %>
+<header class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills float-right">
+      <% current_url = request.path_parameters[:page] %>
+      <% pages.limit(4).each do |item| %>
+        <li class="nav-item">
+          <%= link_to item.title, item.slug, class: "nav-link #{'active' if current_url === item.slug}" %>
+        </li>
+      <% end %>
+      <% if pages.count > 4 %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% pages.drop(4).each do |item| %>
+              <%= link_to item.title, item.slug, class: "dropdown-item #{'active' if current_url === item.slug}" %>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+  <h3 class="text-muted"><%= app_name %></h3>
+</header>
